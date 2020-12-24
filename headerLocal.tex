@@ -1,0 +1,33 @@
+%-------------------------------
+%-------------------------------
+% Local header
+%-------------------------------
+%-------------------------------
+%
+
+\usepackage{etoolbox}				%% to use toggles
+\newtoggle{EnvModeStandalone}
+
+% --------------------------------USER input------------------------------------------------%
+% use this toggle to switch from STANDALONE to IMMERSED mode
+\togglefalse{EnvModeStandalone} %IMMERSED
+%\toggletrue{EnvModeStandalone} %STANDALONE
+% ------------------------------------------------------------------------------------------%
+
+
+% List the external dependencies by the command \listfiles that puts all dependencies into the master log file.
+% Only sensible in the IMMERSED mode, because in STANDALONE there should be none
+% Moreover, we set the paths for both modes, so the global directories relative to the master file as "\PathM" without trailing file separator
+%
+\iftoggle{EnvModeStandalone}{% STANDALONE
+	\newcommand*{\PathM}{./local-folder}%
+}%
+{% IMMERSED
+	\listfiles
+	\newcommand*{\PathM}{../../../..}% relative to the master document
+}%
+%
+
+
+% PathM is also needed internally
+\input{\PathM/common files/header}
