@@ -24,3 +24,8 @@ Here we need an MWE and some pictures of the directories so it becomes clear wha
 7. Now for the tricky part. Open this headerLocal.tex file and take a close look. Modify it to meet your needs as outlined above in Setup.
 5. Execute your local batch script, e.g. by double-clicking it
 6. Now a file with ending .dep should have been created in your LaTeX working directory, that contains lines like "..\..\..\..\GRAPHICS\Fundamentals\processWindows.pdf" (without the quotes!) and you should have the chosen subfolder with again subfolders containing in this case the PDF.
+
+## Bugs, todos
+- Only start looking for "../" to detect external files after the catch phrase "file list" to avoid unwanted behaviour.
+- todo: Don't copy files that are listed multiple times, copy them only once
+- If your filenames and paths get too long, they will be split into two lines in the log file. Because I don't see an easy way to detect that. Go to "C:\Program Files\MiKTeX 2.9\miktex\config\texmfapp.ini" (for Windows and MikTech, else: [https://tex.stackexchange.com/questions/52988/avoid-linebreaks-in-latex-console-log-output-or-increase-columns-in-terminal] or check LaTeX max_print_line) and increase the max_print_line e.g. to 150
