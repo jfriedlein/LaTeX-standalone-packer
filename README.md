@@ -3,7 +3,7 @@ Scripts to pack all external file dependencies of a LaTeX file into a local fold
 
 ## When to use this
 When you write a LaTeX document and load files from other directories all over your hard drive, it gets difficult to backup and exchange the LaTeX project with others. This repository proposes one option to handle this problem. The scripts extracts all external file dependencies from the LaTeX document and copies these files into a local folder.
-In contrast to bundledoc, we only copy external files (.tex, .png, .pdf, .pdf_tex, ...) and not LaTeX packages etc.
+In contrast to bundledoc, we only copy external files (.tex, .png, .pdf, .pdf_tex, ...) but not internal LaTeX packages etc.
 
 ## Setup
 Currently, there is only a batch file, so it's available and tested only for the Windows-Miktech-TexStudio combination. I'll need a Linux version soon anyway, so this might join the batch file in the future.
