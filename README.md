@@ -29,3 +29,8 @@ Here we need an MWE and some pictures of the directories so it becomes clear wha
 - Only start looking for "../" to detect external files after the catch phrase "file list" to avoid unwanted behaviour.
 - todo: Don't copy files that are listed multiple times, copy them only once
 - If your filenames and paths get too long, they will be split into two lines in the log file. Because I don't see an easy way to detect that. Go to "C:\Program Files\MiKTeX 2.9\miktex\config\texmfapp.ini" (for Windows and MikTech, else: [https://tex.stackexchange.com/questions/52988/avoid-linebreaks-in-latex-console-log-output-or-increase-columns-in-terminal] or check LaTeX max_print_line) and increase the max_print_line e.g. to 150
+- Check use of "JREPL.bat" instead of BatchSubstitute.bat
+- The Batch files are dirty, really dirty. They just get the job done without any sense of efficiency or robustness.
+
+# Acknowledgements
+- The "BatchSubstitute.bat" stems form dostips.com. Very good place to find proper scripts. Thanks a lot!
