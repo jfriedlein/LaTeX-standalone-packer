@@ -31,6 +31,7 @@ Here we need an MWE and some pictures of the directories so it becomes clear wha
 - If your filenames and paths get too long, they will be split into two lines in the log file. Because I don't see an easy way to detect that. Go to "C:\Program Files\MiKTeX 2.9\miktex\config\texmfapp.ini" (for Windows and MikTech, else: [https://tex.stackexchange.com/questions/52988/avoid-linebreaks-in-latex-console-log-output-or-increase-columns-in-terminal] or check LaTeX max_print_line) and increase the max_print_line e.g. to 150
 - Check use of "JREPL.bat" instead of BatchSubstitute.bat
 - The Batch files are dirty, really dirty. They just get the job done without any sense of efficiency or robustness.
+- Check how this handles pdf_tex files, maybe use [https://tex.stackexchange.com/questions/337110/how-to-convert-inkscape-pdf-tex-to-pdf/337112] to convert them to pure pdf
 
 # Acknowledgements
 - The "BatchSubstitute.bat" stems form dostips.com. Very good place to find proper scripts. Thanks a lot!
